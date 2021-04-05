@@ -12,7 +12,6 @@ gem 'sinatra-contrib', '~> 2.0.0'
 
 gem 'i18n', '~> 1.8.2'
 gem 'config', '~> 2.2.1'
-gem 'jwt', '~> 2.2.1'
 
 gem 'dry-initializer', '~> 3.0.3'
 gem 'dry-validation', '~> 1.5.0'
