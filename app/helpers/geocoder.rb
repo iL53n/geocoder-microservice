@@ -6,7 +6,7 @@ module Geocoder
   DATA_PATH = "#{Application.root}/db/data/city.csv".freeze
 
   def geocode(city)
-    data[city]
+    data[city] if city
   end
 
   private
