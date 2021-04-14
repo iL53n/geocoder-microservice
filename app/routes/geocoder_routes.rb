@@ -6,10 +6,10 @@ class GeocoderRoutes < Application
       result = Geocoder.geocode(params[:city])
 
       if result.present?
-        status 201
+        status 200
         json result
       else
-        status 422
+        status 404
         json I18n.t(:not_found, scope: 'api.errors')
       end
     end
