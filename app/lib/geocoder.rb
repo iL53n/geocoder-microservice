@@ -3,17 +3,17 @@ require 'csv'
 module Geocoder
   extend self
 
-  DATA_PATH = "#{Application.root}/db/data/city.csv".freeze
+  DATA_PATH = Application.root.concat('/db/data/city.csv')
 
   def geocode(city)
-    data[city] if city
+    data[city]
   end
-
-  private
 
   def data
     @data ||= load_data!
   end
+
+  private
 
   def load_data!
     @data = CSV.read(DATA_PATH, headers: true).inject({}) do |result, row|
