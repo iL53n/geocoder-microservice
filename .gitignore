@@ -66,4 +66,6 @@ build-iPhoneSimulator/
 config/settings.local.yml
 config/*.local.yml
 
-
+# Ignore archived Docker images
+deploy/*.tar
+deploy/*.tar.gz
