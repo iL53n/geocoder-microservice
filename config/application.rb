@@ -1,13 +1,13 @@
-class Application < Sinatra::Base
-  configure do
-    register Sinatra::Namespace
+class Application
+  class << self
+    attr_accessor :logger
 
-    set :app_file, File.expand_path('../config.ru', __dir__)
-  end
+    def root
+      File.expand_path('..', __dir__)
+    end
 
-  configure :development do
-    register Sinatra::Reloader
-
-    set :show_exceptions, false
+    def environment
+      ENV.fetch('RACK_ENV').to_sym
+    end
   end
 end

@@ -1,4 +1,0 @@
-ru:
-  api:
-    errors:
-      not_found: 'Координаты не найдены'
